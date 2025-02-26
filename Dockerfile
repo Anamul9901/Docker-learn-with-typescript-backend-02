@@ -4,11 +4,14 @@ FROM node:20
 WORKDIR /app
 # Set the working directory to /app (all the commands will be executed in this directory)
 
-COPY . .
-# Copy the current directory to the container current directory (dote(.) means current directory)
+COPY package.json .
+# optimize korar jonno package.json file copy kora RUN npm install krece
 
 RUN npm install
 # Run npm install to install all the dependencies
+
+COPY . .
+# Copy the current directory to the container current directory (dote(.) means current directory)
 
 EXPOSE 5000
 # comunicate with the isulated container with 5000 port (mathcing with the port in the server.ts file)
