@@ -1,0 +1,11 @@
+1: build image ---> docker build . [dot mane root derectory build krbe]
+2: show images ---> docker images
+3: run image without browser connection ---> docker run IMAGE ID [docker run 4d6f3ac39520]
+3: run image with browser connection ---> docker run -p 5001:5000 IMAGE ID [5001->browser port : 5000->docker port]
+
+4: show running container ---> docker ps
+5: show all container ---> docker ps -a
+
+6: stop container ---> docker stop CONTAINER ID [docker stop cabbecf14520]
+                  ---> docker container stop Names [docker container stop eloquent_liskov]
+7: remove container ---> docker rm CONTAINER ID [docker rm cabbecf14520]
