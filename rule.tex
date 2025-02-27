@@ -1,11 +1,24 @@
 1: build image ---> docker build . [dot mane root derectory build krbe]
 2: show images ---> docker images
 3: run image without browser connection ---> docker run IMAGE ID [docker run 4d6f3ac39520]
-3: run image with browser connection ---> docker run -p 5001:5000 IMAGE ID [5001->browser port : 5000->docker port]
+3: run image with browser connection:
+---> docker run -p 5001:5000 IMAGE ID [5001->browser port : 5000->docker port] [attached mood e run hobe, logs & port thakbe]
+---> docker run -p 5001:5000 -d IMAGE ID [detuch mood e run hobe, konu logs thakbe nah, port thakbe]
 
 4: show running container ---> docker ps
 5: show all container ---> docker ps -a
 
-6: stop container ---> docker stop CONTAINER ID [docker stop cabbecf14520]
-                  ---> docker container stop Names [docker container stop eloquent_liskov]
-7: remove container ---> docker rm CONTAINER ID [docker rm cabbecf14520]
+6: stop container 
+---> docker stop CONTAINER ID [docker stop cabbecf14520]
+---> docker container stop Names [docker container stop eloquent_liskov]
+
+7: start container 
+---> docker start CONTAINER ID [docker start cabbecf14520] [detuch mood e start hobe, konu port r logs thakbe nah, tai access krte prbo nah]
+---> docker container start -a Names [docker container start -a eloquent_liskov] [attached mood e start hobe, logs & port thakbe]
+
+8: remove container ---> docker rm CONTAINER ID [docker rm cabbecf14520]
+
+
+-----------------docker help-----------------
+1: docker --help
+2: docker run --help
