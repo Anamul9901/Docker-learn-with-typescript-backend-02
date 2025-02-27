@@ -1,23 +1,29 @@
+-----------------docker images---------------
 1: build image ---> docker build . [dot mane root derectory build krbe]
 2: show images ---> docker images
 3: run image without browser connection ---> docker run IMAGE ID [docker run 4d6f3ac39520]
 3: run image with browser connection:
 ---> docker run -p 5001:5000 IMAGE ID [5001->browser port : 5000->docker port] [attached mood e run hobe, logs & port thakbe]
 ---> docker run -p 5001:5000 -d IMAGE ID [detuch mood e run hobe, konu logs thakbe nah, port thakbe]
+4: remove image ---> docker image rmi IMAGE IDs [docker image rmi 4d6f3ac39520 8dfdd6a751e0]
+5: all image remove ---> docker image prune
+6: auto remove container after stop 
+---> docker run -p 5000:5000 --rm CONTAINER ID [docker run -p 5000:5000 --rm 4d6f3ac39520]
 
-4: show running container ---> docker ps
-5: show all container ---> docker ps -a
 
-6: stop container 
+--------------------docker container-------------------
+1: show running container ---> docker ps
+2: show all container ---> docker ps -a
+3: stop container 
 ---> docker stop CONTAINER ID [docker stop cabbecf14520]
 ---> docker container stop Names [docker container stop eloquent_liskov]
-
-7: start container 
+4: start container 
 ---> docker start CONTAINER ID [docker start cabbecf14520] [detuch mood e start hobe, konu port r logs thakbe nah, tai access krte prbo nah]
 ---> docker container start -a Names [docker container start -a eloquent_liskov] [attached mood e start hobe, logs & port thakbe]
-
-8: remove container ---> docker rm CONTAINER ID [docker rm cabbecf14520]
-
+5: remove container 
+---> docker container rm Names [docker container rm magical_murdock clever_snyder clever_allen]
+6: remove all container
+---> docker container prune
 
 -----------------docker help-----------------
 1: docker --help
