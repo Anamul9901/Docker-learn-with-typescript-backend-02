@@ -1,0 +1,20 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "D:\\Programming\\Reward-class\\Docker\\docker-with-typescript-backend\\logs\\winston\\errors\\.1b12b533804f9b94345f68d7ebaa8b9520292222-audit.json",
+    "files": [
+        {
+            "date": 1740743561341,
+            "name": "D:\\Programming\\Reward-class\\Docker\\docker-with-typescript-backend\\logs\\winston\\errors\\docker-2025-02-28-17-error.log",
+            "hash": "427cc6ebed984936f2ba7083ab2e53239c061626c167795433b5e77d9ea70bc8"
+        },
+        {
+            "date": 1740744023888,
+            "name": "D:\\Programming\\Reward-class\\Docker\\docker-with-typescript-backend\\logs\\winston\\errors\\docker-2025-02-28-18-error.log",
+            "hash": "1b1aebd5fe723bb37a71c37a19d57c8f28996448d3bef589a8e10a583e974fa9"
+        }
+    ],
+    "hashType": "sha256"
+}

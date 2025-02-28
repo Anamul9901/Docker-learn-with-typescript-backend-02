@@ -1,0 +1,60 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "D:\\Programming\\Reward-class\\Docker\\docker-with-typescript-backend\\logs\\winston\\successes\\.96bdeb6507ac8996f6e500c40af1582f8983a524-audit.json",
+    "files": [
+        {
+            "date": 1740743561333,
+            "name": "D:\\Programming\\Reward-class\\Docker\\docker-with-typescript-backend\\logs\\winston\\successes\\docker-2025-02-28-17-52-41-success.log",
+            "hash": "1a7064e79825949166253776701ef56b16579e03d9666831a9ef2bfefba63b89"
+        },
+        {
+            "date": 1740743636800,
+            "name": "D:\\Programming\\Reward-class\\Docker\\docker-with-typescript-backend\\logs\\winston\\successes\\docker-2025-02-28-17-53-56-success.log",
+            "hash": "3198319a018111d1afa367c1a951e24d1c126d11111d695a88ca0a089e8b8aae"
+        },
+        {
+            "date": 1740743643329,
+            "name": "D:\\Programming\\Reward-class\\Docker\\docker-with-typescript-backend\\logs\\winston\\successes\\docker-2025-02-28-17-54-03-success.log",
+            "hash": "f73d957a54164a82e940dfca05673b8fbaad0e23e4db4c2cb7eabec840d403cf"
+        },
+        {
+            "date": 1740743649140,
+            "name": "D:\\Programming\\Reward-class\\Docker\\docker-with-typescript-backend\\logs\\winston\\successes\\docker-2025-02-28-17-54-09-success.log",
+            "hash": "fb096dd0be790d68d691b93fc0a268e4f77cfe91d339b1eff85eb43e0026a0b5"
+        },
+        {
+            "date": 1740743652245,
+            "name": "D:\\Programming\\Reward-class\\Docker\\docker-with-typescript-backend\\logs\\winston\\successes\\docker-2025-02-28-17-54-12-success.log",
+            "hash": "45d5ce53a9e0f0541f4fb1746db7825d8e1794ab69a1cce146c6bea0c0ecc4ab"
+        },
+        {
+            "date": 1740743655379,
+            "name": "D:\\Programming\\Reward-class\\Docker\\docker-with-typescript-backend\\logs\\winston\\successes\\docker-2025-02-28-17-54-15-success.log",
+            "hash": "0e830a5275100286a7142f6c3f5607b412b985ef11ab071e1c25fe1ef9da74fa"
+        },
+        {
+            "date": 1740743657966,
+            "name": "D:\\Programming\\Reward-class\\Docker\\docker-with-typescript-backend\\logs\\winston\\successes\\docker-2025-02-28-17-54-17-success.log",
+            "hash": "27887df5adaa842e1799cc8ab1c32b572b967e382a77594698ba7d0a4954fb5a"
+        },
+        {
+            "date": 1740743662612,
+            "name": "D:\\Programming\\Reward-class\\Docker\\docker-with-typescript-backend\\logs\\winston\\successes\\docker-2025-02-28-17-54-22-success.log",
+            "hash": "daa7327c1e0f7e484e5c0133e00830a57b157778ee0a901f18fc2b200d6fa4a7"
+        },
+        {
+            "date": 1740743666253,
+            "name": "D:\\Programming\\Reward-class\\Docker\\docker-with-typescript-backend\\logs\\winston\\successes\\docker-2025-02-28-17-54-26-success.log",
+            "hash": "645d2e28633b47a6c43847dcaab2954687eddffd320c6c38099d2eb8541e06cc"
+        },
+        {
+            "date": 1740743896449,
+            "name": "D:\\Programming\\Reward-class\\Docker\\docker-with-typescript-backend\\logs\\winston\\successes\\docker-2025-02-28-17-58-16-success.log",
+            "hash": "ceff009b1ba7601af63c7199388fa085ac1f22c316c7bc29bec7f36af97be872"
+        }
+    ],
+    "hashType": "sha256"
+}
