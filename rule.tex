@@ -34,3 +34,15 @@
 -----------------docker help-----------------
 1: docker --help
 2: docker run --help
+
+
+-----------------docker hub push pul-----------------
+1: docker login
+2: create repository in docker hub
+3: build same name image to docker hub repository name
+ or rename image to docker hub repository name ---> docker image tag IMAGE_NAME:TAG Docker_buh_repo_name [docker image tag image_name:latest  docker-typescript:v1]
+4: push image to docker hub ---> docker push anamul114/typescript-node-backend:v1 [docker push docker-typescript:v1] [aikhane tag(v1) na dele auto 'latest' name tag bose jabe]
+
+5: pull from docker
+---> docker pull anamul114/typescript-node-backend:v1 
+---> docker run -p 5000:5000 --rm --name container-name anamul114/typescript-node-backend:v1 [if image not exist locally then pull from docker hub(if exist docker hub) and run] [jode image loccaly exist koreth tahole pull krbe nah. tai docker hub er letest code pagbo nah]
