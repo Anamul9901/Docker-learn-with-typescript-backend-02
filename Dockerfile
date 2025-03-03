@@ -13,6 +13,10 @@ RUN npm install
 COPY . .
 # Copy the current directory to the container current directory (dote(.) means current directory)
 
+# VOLUME ["/app/logs"]
+# this anonimus volume
+# Create a volume in the container to store the logs in local storage any file.
+
 EXPOSE 5000
 # comunicate with the isulated container with 5000 port (mathcing with the port in the server.ts file)
 # last comment er age expose add krbo

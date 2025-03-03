@@ -1,0 +1,12 @@
+docker er kaj hocche, container er konu file k local storage e save kore rakha. jode container delete kore fela hoi tao local file e file gulu theke jabe.
+
+1: create named volume
+--> docker run -p 5000:5000 --name ts-container --rm -v ts-volume-logs:/app/logs ts-docker:v2  [-v volume_name:Saved_file_path]
+[ekhon container remove hobar poreo named volume theke logs file gulu theke jabe, abar container ai volume dya run korle oi logs file gulu pua jabe]
+
+2: show all volume
+--> docker volume ls
+
+3: remove volume
+--> docker volume rm volume_name_1 volume_name_2
+--> docker volume prune [delete all volume]
