@@ -1,0 +1,23 @@
+{
+    "name": "ts-container", //container name
+    "image": "node",
+    "workspaceFolder": "/app",
+    "mounts": [
+        // Bind mount for my local project
+        "source=/d/Programming/Reward-class/Docker/docker-with-typescript-backend,target=/app,type=bind",
+
+        // Named volume for logs (similar to: -v ts-docker-logs://app/logs)
+        "source=ts-docker-logs,target=/app/logs,type=volume",
+
+        //Anonymous volume for node_modules (similar to: -v /app/node_modules)
+        "target=/app/node_modules,type=volume"
+    ],
+    "runArgs": [
+        "--name",
+        "ts-container",
+        "-p",
+        "5000:5000",
+        "--rm"
+    ],
+    "postCreateCommand": "npm install"
+}
