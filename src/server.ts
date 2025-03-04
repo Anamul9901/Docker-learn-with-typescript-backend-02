@@ -3,7 +3,7 @@ import app from "./app";
 import { errorlogger, logger } from "./app/src/shared/logger";
 
 let server: Server;
-const port = 5000;
+const port = process.env.PORT;
 
 async function main() {
   try {

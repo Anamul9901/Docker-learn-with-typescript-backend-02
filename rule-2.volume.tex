@@ -21,12 +21,13 @@
 2: ["dev": "ts-node-dev --respawn --transpile-only --poll src/server.ts",]  package.json er ai line --poll dile bind mount e file change krle auto change hobe.
 
 3: run with bind mode
----> docker run -p 5000:5000 --name ts-container -v ts-docker-logs://app/logs -w //app -v "//d/Programming/Reward-class/Docker/docker-with-typescript-backend"://app -v //app/node_modules --rm ts-docker:v2
+---> docker run -p 5000:5000 --name ts-container -v ts-docker-logs://app/logs -w //app -v "//d/Programming/Reward-class/Docker/docker-with-typescript-backend"://app -v //app/node_modules --env-file ./.env --rm ts-docker:v2
 ---> "//d/Programming/Reward-class/Docker/docker-with-typescript-backend"://app or  "//$(pwd)"://app (for git brash) or "${PWD}://app" (for power shall) or "%cd%"://app (for cmd)
 --> ["-v ts-docker-logs://app/logs" named volume, tai 'logs' file ta save thakbe local storage e]
 --> ["-v "//d/Programming/Reward-class/Docker/docker-with-typescript-backend"://app" bind mount, 'app' file er all replace korbe container er sathe. R bind hoye jabe tai ek jygy change krle arek jygy change hoye jabe]
 --> ["-v //app/node_modules" anonymous volume, jokhon continer run kora hobe thokhon node_modules notun kore create hoye anonymous vabe save thakbe. aita na dele and locally node_modules na thakle container e node_modules thakbe na (tai always ai command debo)]
 --> ["-w //app" workdirectory set kora]
+--> ["--env-file ./.env" declired env file location]
 
 
 -------------- Run bind mount without tarminals --------------
