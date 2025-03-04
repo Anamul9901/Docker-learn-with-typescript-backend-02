@@ -1,7 +1,10 @@
-docker er kaj hocche, container er konu file k local storage e save kore rakha. jode container delete kore fela hoi tao local file e file gulu theke jabe.
+-------------------Volume-------------------
+
+--> docker er kaj hocche, container er konu file k local storage e save kore rakha. jode container delete kore fela hoi tao local file e file gulu theke jabe(only named volume er khetre).
+--> volume er file loval pc er kuty store hobe ta docker decide krbe. 
 
 1: create named volume
---> docker run -p 5000:5000 --name ts-container --rm -v ts-volume-logs:/app/logs ts-docker:v2  [-v volume_name:Saved_file_path]
+--> docker run -p 5000:5000 --name ts-container --rm -v ts-volume-logs://app/logs ts-docker:v2  [-v volume_name:Saved_file_path]
 [ekhon container remove hobar poreo named volume theke logs file gulu theke jabe, abar container ai volume dya run korle oi logs file gulu pua jabe]
 
 2: show all volume
@@ -10,3 +13,17 @@ docker er kaj hocche, container er konu file k local storage e save kore rakha. 
 3: remove volume
 --> docker volume rm volume_name_1 volume_name_2
 --> docker volume prune [delete all volume]
+
+
+-------------------Bind Mount-------------------
+1: Bind Mount er maddhome file kuthy save hobe ta decide kore dete hobe. r local pc er file change krle container er file auto change hobe. abar container er file change krle local pc er file auto change hobe.
+
+2: ["dev": "ts-node-dev --respawn --transpile-only --poll src/server.ts",]  package.json er ai line --poll dile bind mount e file change krle auto change hobe.
+
+3: run with bind mode
+---> docker run -p 5000:5000 --name ts-container -v ts-docker-logs://app/logs -w //app -v "//d/Programming/Reward-class/Docker/docker-with-typescript-backend"://app -v //app/node_modules --rm ts-docker:v2
+---> "//d/Programming/Reward-class/Docker/docker-with-typescript-backend"://app or  "//$(pwd)"://app (for git brash) or "${PWD}://app" (for power shall) or "%cd%"://app (for cmd)
+--> ["-v ts-docker-logs://app/logs" named volume, tai 'logs' file ta save thakbe local storage e]
+--> ["-v "//d/Programming/Reward-class/Docker/docker-with-typescript-backend"://app" bind mount, 'app' file er all replace korbe container er sathe. R bind hoye jabe tai ek jygy change krle arek jygy change hoye jabe]
+--> ["-v //app/node_modules" anonymous volume, jokhon continer run kora hobe thokhon node_modules notun kore create hoye anonymous vabe save thakbe. aita na dele and locally node_modules na thakle container e node_modules thakbe na (tai always ai command debo)]
+--> ["-w //app" workdirectory set kora]
