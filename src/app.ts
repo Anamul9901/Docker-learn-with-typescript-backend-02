@@ -10,6 +10,14 @@ app.use(express.static(path.join(__dirname, "../public"))); // Adjusted path
 
 // Parsers
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.get("/todos", async (req: Request, res: any) => {
+  const response = await fetch('https://jsonplaceholder.typicode.com/todos');
+  // const response = await fetch('http://ts-docker-container:5000/api/v1/users');
+  const todos = await response.json();
+  return res.status(200).json(todos);
+});
 
 // Welcome route
 app.get("/", (req: Request, res: Response) => {
