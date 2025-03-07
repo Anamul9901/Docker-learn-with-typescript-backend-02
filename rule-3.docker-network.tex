@@ -21,8 +21,20 @@ DB_URL=mongodb://host.docker.internal:27017/docker-learn
 ---> dockre pull mongo
 2: run mongo container
 ---> docker run --neme mongodb --rm mongo [aikhane port dur drkar nai. krone browser exess kora hobe nah.]
-3: find mongodb container ID
+3: find mongodb container ID [use 4 no rule]
 ---> docker container inspect mongodb [mongodb is container name]
 --> then copy the IPAddress 
 --> past the ip in DB_URL= DB_URL=mongodb://172.17.0.2:27017/docker-learn
 --> run the ts-container with continer mongodb url
+
+4: without mongodb container Id, with docker network
+4.1: create docker network
+---> docker network create ts-docker-network
+---> docker network ls [show all network]
+4.2: run mongo container with network
+---> docker run --name mongodb --rm --network ts-docker-network mongo
+4.3: replace localhost with container name 
+---> DB_URL=mongodb://localhost:27017/docker-learn
+---> DB_URL=mongodb://mongodb:27017/docker-learn
+4.4: run ts-container(my-project) with same network
+---> docker run -p 5000:5000 --name ts-container --rm -w //app -v ts-docker-logs://app/logs -v "//$(pwd)"://app -v //app/node_modules --env-file .env --network ts-docker-network ts-docker:v1 ["--network ts-docker-network"]
