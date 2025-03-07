@@ -1,15 +1,28 @@
+
+1: docker build ts-docker:v4 .
+2: docker run -p 5000:5000 --name ts-container --rm -w //app -v ts-docker-logs://app/logs -v "//$(pwd)"://app -v //app/node_modules --env-file .env ts-docker:v4
+
 (Case 1) Container To WWW Communication
 Note: [www url er sathe container er bydefault connection hoi. er jonno notun kore konu configuration er drkr ney]
 1: docker build ts-docker:v4 .
 2: docker run -p 5000:5000 --name ts-container --rm -w //app -v ts-docker-logs://app/logs -v "//$(pwd)"://app -v //app/node_modules --env-file .env ts-docker:v4
+
+
 
 (Case 2) Container To Local Host Machine Communication
 Note: [container e localhost url use krar khetre, "localhost" er poreborte "host.docker.internal" use krte hobe]
 DB_URL=mongodb://localhost:27017/docker-learn
 DB_URL=mongodb://host.docker.internal:27017/docker-learn
 
-1: docker build ts-docker:v4 .
-2: docker run -p 5000:5000 --name ts-container --rm -w //app -v ts-docker-logs://app/logs -v "//$(pwd)"://app -v //app/node_modules --env-file .env ts-docker:v4
 
 
 (Case 3) Container to Container Communication
+1: pull and build docker image
+---> dockre pull mongo
+2: run mongo container
+---> docker run --neme mongodb --rm mongo [aikhane port dur drkar nai. krone browser exess kora hobe nah.]
+3: find mongodb container ID
+---> docker container inspect mongodb [mongodb is container name]
+--> then copy the IPAddress 
+--> past the ip in DB_URL= DB_URL=mongodb://172.17.0.2:27017/docker-learn
+--> run the ts-container with continer mongodb url
