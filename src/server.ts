@@ -1,20 +1,21 @@
 import { Server } from "http";
-import app from "./app";
-import { errorlogger, logger } from "./app/src/shared/logger";
 import mongoose from "mongoose";
-import 'dotenv/config'
+import app from "./app";
+import config from "./app/config";
+import { errorlogger, logger } from "./app/src/shared/logger";
 
 let server: Server;
-const port = process.env.PORT;
 
 async function main() {
   try {
-    await mongoose.connect(process.env.DB_URL as string);
-    logger.info("Connect to database");
+    await mongoose.connect(config.database_url as string);
 
-    server = app.listen(port, () => {
-      console.log(`app is listening on port ${port}`);
-      logger.info(`app is listening on port ${port}`);
+    logger.info("Connected to database");
+
+
+    server = app.listen(process.env.PORT, () => {
+      console.log(`app is listening on port ${process.env.PORT}`);
+      logger.info(`app is listening on port ${process.env.PORT}`);
     });
   } catch (err) {
     console.log(err);
