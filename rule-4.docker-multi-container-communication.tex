@@ -3,7 +3,8 @@
 
 ------------------Database dockeraz--------------------
 1: docker pull mongo
-2: docker run --name mongodb --rm --network ts-docker-net mongo
+2: docker run --name mongodb --rm -v ts-docker-db:/data/db --network ts-docker-net mongo
+["-v ts-docker-db:/data/db" ai named volume er maddhome mongodb e 'ts-docker-db' file e backend er data save kore rakhbe. tai mongodb container delete kore felleo data save thakbe]
 
 
 ------------------Backend dockeraz---------------------
