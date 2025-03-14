@@ -3,8 +3,12 @@
 
 ------------------Database dockeraz--------------------
 1: docker pull mongo
-2: docker run --name mongodb --rm -v ts-docker-db:/data/db --network ts-docker-net mongo
+2: docker run --name mongodb --rm -v ts-docker-db:/data/db -e MONGO_INITDB_ROOT_USERNAME=ts-docker -e MONGO_INITDB_ROOT_PASSWORD=ts-docker-pass --network ts-docker-net mongo
 ["-v ts-docker-db:/data/db" ai named volume er maddhome mongodb e 'ts-docker-db' file e backend er data save kore rakhbe. tai mongodb container delete kore felleo data save thakbe]
+["-e MONGO_INITDB_ROOT_USERNAME=ts-docker -e MONGO_INITDB_ROOT_PASSWORD=ts-docker-pass" add local mongodb user-name & password for sequre local database.]
+[user-name password user krle backend .env te ai vabe dete hobe:
+# DB_URL=mongodb://user_name:password@mongodb:27017/docker-learn?authSource=admin
+DB_URL=mongodb://ts-docker:ts-docker-pass@mongodb:27017/docker-learn?authSource=admin]
 
 
 ------------------Backend dockeraz---------------------
