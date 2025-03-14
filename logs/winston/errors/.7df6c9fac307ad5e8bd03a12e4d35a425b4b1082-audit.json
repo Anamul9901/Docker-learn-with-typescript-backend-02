@@ -1,0 +1,30 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "D:\\Programming\\Reward-class\\Docker\\Docker-learn-with-typescript-backend-02\\logs\\winston\\errors\\.7df6c9fac307ad5e8bd03a12e4d35a425b4b1082-audit.json",
+    "files": [
+        {
+            "date": 1741337720798,
+            "name": "D:\\Programming\\Reward-class\\Docker\\Docker-learn-with-typescript-backend-02\\logs\\winston\\errors\\docker-2025-03-07-14-error.log",
+            "hash": "b3f6015545b71754b1395872a54ae5afabf06d6995ad21174855785966e2f665"
+        },
+        {
+            "date": 1741338071300,
+            "name": "D:\\Programming\\Reward-class\\Docker\\Docker-learn-with-typescript-backend-02\\logs\\winston\\errors\\docker-2025-03-07-15-error.log",
+            "hash": "873e59db71b1b8e08e0fcd57ffe94d7cd8d3c422873e1f5729c5e70a24bfeb71"
+        },
+        {
+            "date": 1741504619929,
+            "name": "D:\\Programming\\Reward-class\\Docker\\Docker-learn-with-typescript-backend-02\\logs\\winston\\errors\\docker-2025-03-09-13-error.log",
+            "hash": "d81b74f583739666d3794b1b9f8ce884a14964e589c3fa1c49fcb1b9ce345b09"
+        },
+        {
+            "date": 1741507878065,
+            "name": "D:\\Programming\\Reward-class\\Docker\\Docker-learn-with-typescript-backend-02\\logs\\winston\\errors\\docker-2025-03-09-14-error.log",
+            "hash": "e335f160613a68263b667daea4d5b43248e71e170aca5eebb3fdd67eb559e4de"
+        }
+    ],
+    "hashType": "sha256"
+}

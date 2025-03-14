@@ -1,0 +1,9 @@
+Sun Mar 09 2025 13:17:30 } [DOCKER] error: getaddrinfo ENOTFOUND mongodb
+Sun Mar 09 2025 13:27:48 } [DOCKER] error: Unexpected field
+Sun Mar 09 2025 13:27:59 } [DOCKER] error: Unexpected field
+Sun Mar 09 2025 13:30:34 } [DOCKER] error: Unexpected field
+Sun Mar 09 2025 13:31:10 } [DOCKER] error: Unexpected field
+Sun Mar 09 2025 13:31:16 } [DOCKER] error: Unexpected field
+Sun Mar 09 2025 13:31:26 } [DOCKER] error: Unexpected field
+Sun Mar 09 2025 13:31:45 } [DOCKER] error: Unexpected field
+Sun Mar 09 2025 13:32:29 } [DOCKER] error: Unexpected token u in JSON at position 0

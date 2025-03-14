@@ -1,0 +1,24 @@
+1: create a network
+---> docker network create ts-docker-net
+
+------------------Database dockeraz--------------------
+1: docker pull mongo
+2: docker run --name mongodb --rm --network ts-docker-net mongo
+
+
+------------------Backend dockeraz---------------------
+1: docker build -t ts-docker-backend:v1 .
+2: docker run --name ts-backend-container -p 5000:5000 --rm --network ts-docker-net --env-file .env -w //app -v ts-docker-logs://app/logs -v "//$(pwd)"://app -v //app/node_modules ts-docker-backend:v1
+
+---------------Frontend Dockeriz(for frontend code)--------------------
+1: {
+    # NEXT_PUBLIC_API_URL=http://localhost:5000
+    NEXT_PUBLIC_API_URL=http://ts-backend-container:5000
+    # local host dele container er frontend, backend er sathe connect krte parbe nah.
+    # karon frontend locally run hoche nah, container er network e ran hoche
+    # localhost er poriborte backend container er name dete hobe
+    }
+2: docker build -t ts-docker-frontend:v1 .
+3: docker run --name ts-docker-frontend-container --rm -p 3000:3000 --env-file .env.local -w //app -v "//$(pwd)"://app -v //app/node_modules -e WATCHPACK_POLLING=true --network ts-docker-net ts-docker-frontend:v2
+[ "-e WATCHPACK_POLLING=true" aita use krle code chane krle auto update hobe browser e. aita comment e use na kore .env.local file e o use krte parbo]
+3: 
